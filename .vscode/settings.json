@@ -1,0 +1,87 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.eol": "\n",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "editor.semanticHighlighting.enabled": true,
+  "editor.bracketPairColorization.enabled": false,
+  "editor.guides.bracketPairs": false,
+  "editor.guides.highlightActiveBracketPair": false,
+  "editor.guides.indentation": false,
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.guides.verticalRules": [],
+  "editor.tokenColorCustomizations": {
+    "comments": "#5C6370",
+    "strings": "#98C379",
+    "numbers": "#D19A66",
+    "keywords": "#C678DD",
+    "types": "#E5C07B",
+    "functions": "#61AFEF",
+    "variables": "#E06C75",
+    "textMateRules": [
+      {
+        "scope": ["entity.name.type", "support.type"],
+        "settings": {
+          "foreground": "#E5C07B"
+        }
+      },
+      {
+        "scope": ["keyword.operator", "punctuation.separator"],
+        "settings": {
+          "foreground": "#56B6C2"
+        }
+      },
+      {
+        "scope": ["string.quoted", "string.template"],
+        "settings": {
+          "foreground": "#98C379"
+        }
+      }
+    ]
+  },
+  "workbench.colorCustomizations": {
+    // "editor.background": "#333",
+    "editor.foreground": "#ABB2BF",
+    "editor.lineHighlightBackground": "#2C313C",
+    "editor.selectionBackground": "#3E4451",
+    "editorCursor.foreground": "#528BFF",
+    "editorWhitespace.foreground": "#3B4048",
+    "titleBar.activeBackground": "#282C34",
+    "statusBar.background": "#21252B",
+    "sideBar.background": "#21252B",
+    "activityBar.background": "#282C34",
+    "tab.activeBackground": "#282C34",
+    "tab.inactiveBackground": "#21252B"
+  },
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.5,
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.renderWhitespace": "none",
+  "editor.minimap.enabled": true,
+  "editor.rulers": [100],
+  "workbench.iconTheme": "material-icon-theme",
+  "prettier.requireConfig": true,
+  "tailwindCSS.experimental.classRegex": [],
+  "css.validate": false,
+  "tailwindCSS.validate": true
+}
