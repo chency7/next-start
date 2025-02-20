@@ -1,6 +1,11 @@
+<div align="center">
+  <img src="public/logo.svg" alt="Next.js Template Logo" width="120" height="120" />
+
 # 🚀 Next.js 项目模板
 
 基于 [Next.js 15](https://nextjs.org) 构建的现代化 Web 应用模板，集成了最佳实践和常用工具。
+
+</div>
 
 ## ✨ 特性
 
