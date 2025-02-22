@@ -6,10 +6,11 @@ import type { Configuration as WebpackConfig } from 'webpack';
 const nextConfig: NextConfig = {
   output: 'standalone',
   experimental: {
-    // 启用 turbopack
-    turbo: true,
+    // 关闭 turbopack
+    //  turbo: { enabled: false },
   },
   webpack: (config: WebpackConfig) => {
+    config.resolve = config.resolve || {};
     config.resolve.alias = {
       ...config.resolve.alias,
       '@': path.join(__dirname, 'src'),
@@ -30,4 +31,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

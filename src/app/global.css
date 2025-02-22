@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+/* body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+@layer base {
+  .text-edge-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  }
+}
+
+body {
+  font-family: var(--font-wenkai), var(--font-Pacifico), sans-serif;
+}
+
+/* 自定义音频播放器样式 */
+.rhap_container {
+  padding: 0.5rem !important;
+}
+
+.rhap_main-controls-button {
+  color: rgb(161 161 170) !important;
+}
+
+.rhap_main-controls-button:hover {
+  color: rgb(244 244 245) !important;
+}
+
+.rhap_volume-button {
+  color: rgb(161 161 170) !important;
+}
+
+.rhap_volume-button:hover {
+  color: rgb(244 244 245) !important;
+}
+
+.rhap_volume-bar {
+  background: rgb(63 63 70) !important;
+}
+
+.rhap_volume-indicator {
+  background: rgb(244 244 245) !important;
+}
+
+.rhap_progress-filled {
+  background: rgb(244 244 245) !important;
+}
+
+.rhap_progress-bar {
+  background: rgb(63 63 70) !important;
+}
+
+.rhap_progress-indicator {
+  background: rgb(244 244 245) !important;
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px; /* 滚动条宽度 */
+  height: 8px; /* 横向滚动条高度 */
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* 滚动条轨道背景色 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333; /* 滚动条颜色 */
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444; /* 鼠标悬停时的颜色 */
+}
+
+/* Firefox 滚动条样式 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #333 #1a1a1a;
+}
+
+/* 音量滑块样式 */
+input[type='range'] {
+  -webkit-appearance: none;
+  background: transparent;
+  position: relative;
+}
+
+/* Webkit (Chrome, Safari) 样式 */
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #f4f4f5;
+  cursor: pointer;
+  margin-top: -6px; /* 调整滑块垂直位置 */
+  box-shadow: 0 0 10px rgba(244, 244, 245, 0.3);
+  transition: all 0.2s ease;
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+  background: #ffffff;
+  box-shadow: 0 0 15px rgba(244, 244, 245, 0.5);
+  transform: scale(1.1);
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  background: rgba(244, 244, 245, 0.1);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+/* Firefox 样式 */
+input[type='range']::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border: none;
+  border-radius: 50%;
+  background: #f4f4f5;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(244, 244, 245, 0.3);
+  transition: all 0.2s ease;
+}
+
+input[type='range']::-moz-range-thumb:hover {
+  background: #ffffff;
+  box-shadow: 0 0 15px rgba(244, 244, 245, 0.5);
+  transform: scale(1.1);
+}
+
+input[type='range']::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  background: rgba(244, 244, 245, 0.1);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* 修改滑块容器样式 */
+.volume-slider-container {
+  background: linear-gradient(to bottom, rgba(24, 24, 27, 1), rgba(24, 24, 27, 0.8));
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(244, 244, 245, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: calc(100% + 42px);
+  left: 0;
+}
+
+/* MDX 复制按钮样式 */
+pre[class*='language-'] {
+  position: relative;
+}
+
+pre[class*='language-'] button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  padding: 0.25em 0.5em;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+pre[class*='language-']:hover button {
+  opacity: 1;
+}

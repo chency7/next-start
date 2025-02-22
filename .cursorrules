@@ -22,12 +22,14 @@
     ### 编写代码时：
     - 项目目录结构如下
     - src
-        - app
-        - components
-        - utils
-        - types
-        - styles
-        - lib
+        - app // 页面
+        - components // 组件
+        - utils // 工具函数
+        - types // 类型
+        - styles // 样式
+        - lib // 库
+        - api // api
+    - 合理的使用next/after
     - 使用pnpm包管理工具 而不是npm
     - 使用Next.js 15的App Router而不是Pages Router。
     - 优先使用Server Components，只在必要时使用Client Components。
@@ -53,6 +55,6 @@
     ## 第三步：项目总结和优化
     - 完成任务后，反思完成步骤，思考项目可能存在的问题和改进方式。
     - 更新README.md文件，包括新增功能说明和优化建议。
-    - 考虑使用Next.js 14的高级特性，如增量静态再生成（ISR）、动态导入等来进一步优化性能。
+    - 考虑使用Next.js 15的高级特性，如增量静态再生成（ISR）、动态导入等来进一步优化性能。
 
     在整个过程中，始终参考[Next.js官方文档](https://nextjs.org/docs)，确保使用最新的Next.js 14最佳实践。
