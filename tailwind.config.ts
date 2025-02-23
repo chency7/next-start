@@ -43,7 +43,7 @@ module.exports = {
         title: "title 3s ease-out forwards",
         "fade-left": "fade-left 3s ease-in-out forwards",
         "fade-right": "fade-right 3s ease-in-out forwards",
-        typing: "typing 2s steps(200) forwards",
+        typing: "typing 2s steps(6, end) forwards",
         spin: "spin 1s linear infinite",
         "reverse-spin": "reverse-spin 1.5s linear infinite",
         "loading-bar": "loading-bar 2s ease-in-out infinite",
@@ -109,13 +109,11 @@ module.exports = {
         },
         typing: {
           "0%": {
-            clipPath: "inset(0 100% 0 0)",
-            visibility: "hidden",
+            width: "0",
           },
           "100%": {
-            clipPath: "inset(0 0 0 0)",
-            visibility: "visible",
-          },
+            width: "100%",
+          }
         },
         "reverse-spin": {
           from: {

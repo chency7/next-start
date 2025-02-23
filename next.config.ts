@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   output: 'standalone',
   experimental: {
     // 关闭 turbopack
-    //  turbo: { enabled: false },
+    webpackBuildWorker: false
   },
   webpack: (config: WebpackConfig) => {
     config.resolve = config.resolve || {};
@@ -15,6 +15,15 @@ const nextConfig: NextConfig = {
       ...config.resolve.alias,
       '@': path.join(__dirname, 'src'),
     };
+    // 添加重试机制
+    config.output = {
+      ...config.output,
+      // @ts-ignore
+      retryChunkLoad: true,
+      chunkLoadTimeout: 30000,
+    };
+
+
     return config;
   },
   // 生产环境的源码映射，便于调试

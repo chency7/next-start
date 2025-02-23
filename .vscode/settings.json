@@ -1,35 +1,99 @@
 {
-  "editor.fontFamily": "'Fira Code', 'Consolas', 'Courier New', monospace",
-  "editor.fontLigatures": true,
+  "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
   "editor.fontSize": 14,
-  "editor.lineHeight": 24,
-  "editor.fontWeight": "normal",
+  "editor.lineHeight": 1.5,
+  "editor.fontLigatures": true,
   "workbench.colorTheme": "One Dark Pro",
   "editor.tokenColorCustomizations": {
-    "comments": "#6A9955",
-    "keywords": "#569CD6",
-    "strings": "#CE9178",
-    "functions": "#DCDCAA",
-    "variables": "#9CDCFE",
-    "numbers": "#B5CEA8",
-    "types": "#4EC9B0"
+    "textMateRules": [
+      {
+        "scope": ["comment"],
+        "settings": {
+          "foreground": "#5C6370",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": ["keyword"],
+        "settings": {
+          "foreground": "#C678DD"
+        }
+      },
+      {
+        "scope": ["string"],
+        "settings": {
+          "foreground": "#98C379"
+        }
+      },
+      {
+        "scope": ["constant"],
+        "settings": {
+          "foreground": "#61AFEF"
+        }
+      },
+      {
+        "scope": ["entity.name.tag.js.jsx", "entity.name.tag.tsx"],
+        "settings": {
+          "foreground": "#7aa2f7"
+        }
+      },
+      {
+        "scope": ["entity.other.attribute-name.js.jsx", "entity.other.attribute-name.tsx"],
+        "settings": {
+          "foreground": "#bb9af7"
+        }
+      },
+      {
+        "scope": [
+          "string.quoted.double.js.jsx",
+          "string.quoted.single.js.jsx",
+          "string.quoted.tsx"
+        ],
+        "settings": {
+          "foreground": "#9ece6a"
+        }
+      },
+      {
+        "scope": ["variable.other.readwrite.js.jsx", "variable.other.object.tsx"],
+        "settings": {
+          "foreground": "#f7768e"
+        }
+      },
+      {
+        "scope": ["punctuation.definition.template-expression"],
+        "settings": {
+          "foreground": "#ff9e64"
+        }
+      },
+      {
+        "scope": ["support.class.component.jsx", "support.class.component.tsx"],
+        "settings": {
+          "foreground": "#2ac3de"
+        }
+      },
+      {
+        "scope": ["comment.line", "comment.block"],
+        "settings": {
+          "foreground": "#565f89"
+        }
+      }
+    ]
   },
+  "editor.semanticHighlighting.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": false,
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.guides.highlightActiveBracketPair": false,
+  "editor.guides.indentation": false,
+  "editor.guides.highlightActiveIndentation": false,
   "workbench.colorCustomizations": {
-    "editor.background": "#1E1E1E",
-    "sideBar.background": "#252526",
-    "statusBar.background": "#007ACC",
-    "tab.activeBackground": "#2D2D2D",
-    "editor.lineHighlightBackground": "#2D2D2D"
-  },
-  "[javascript]": {
-    "editor.tokenColorCustomizations": {
-      "keywords": "#FF79C6",
-      "strings": "#F1FA8C"
-    }
-  },
-  "[typescript]": {
-    "editor.tokenColorCustomizations": {
-      "types": "#8BE9FD"
+    "[One Dark Pro]": {
+      // 或你正在使用的主题名
+      "editor.background": "#111111", // 编辑器背景
+      "sideBar.background": "#1a1a1a", // 侧边栏背景
+      "terminal.background": "#1a1a1a", // 终端背景
+      "panel.background": "#1a1a1a", // 面板背景
+      "activityBar.background": "#1a1a1a" // 活动栏背景
     }
   }
 }

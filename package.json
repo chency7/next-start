@@ -9,11 +9,15 @@
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "format": "prettier --write \"**/*.{ts,tsx,css,md,json}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "clean": "rimraf node_modules .next",
+    "clean:all": "rimraf node_modules .next .contentlayer dist build"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
+    "fontfaceobserver": "^2.3.0",
     "framer-motion": "^12.4.7",
+    "localforage": "^1.10.0",
     "lodash": "^4.17.21",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.475.0",
@@ -21,11 +25,15 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-responsive": "^10.0.0",
+    "react-use": "^17.6.0",
+    "rimraf": "^6.0.1",
+    "swr": "^2.3.2",
     "tailwindcss-debug-screens": "^2.2.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
+    "@types/fontfaceobserver": "^2.1.3",
     "@types/lodash": "^4.17.15",
     "@types/node": "^20",
     "@types/react": "^19",
