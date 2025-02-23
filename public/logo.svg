@@ -1,0 +1,54 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 主圆环 -->
+  <circle 
+    cx="20" 
+    cy="20" 
+    r="18" 
+    stroke="url(#gradient)" 
+    stroke-width="2.5"
+    stroke-dasharray="2 2"
+  />
+  
+  <!-- 内部装饰线 -->
+  <path
+    d="M28 20C28 24.4183 24.4183 28 20 28C15.5817 28 12 24.4183 12 20C12 15.5817 15.5817 12 20 12"
+    stroke="url(#gradient)"
+    stroke-width="2.5"
+    stroke-linecap="round"
+  />
+  
+  <!-- 点缀元素 -->
+  <circle 
+    cx="20" 
+    cy="12" 
+    r="2.5" 
+    fill="url(#gradient)"
+  />
+  
+  <!-- 动态光效 -->
+  <circle 
+    cx="20" 
+    cy="20" 
+    r="16" 
+    stroke="url(#shine)" 
+    stroke-width="0.5"
+    opacity="0.6"
+  />
+
+  <!-- 渐变定义 -->
+  <defs>
+    <!-- 主渐变 -->
+    <linearGradient id="gradient" x1="4" y1="4" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    
+    <!-- 光效渐变 -->
+    <linearGradient id="shine" x1="8" y1="8" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#EC4899" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+</svg> 

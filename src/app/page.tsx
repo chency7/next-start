@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Particles from '@/components/particles';
 import { Github } from 'lucide-react';
@@ -113,6 +114,19 @@ export default function ThemeDark() {
 
   return (
     <div className="fixed inset-0 flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-tl from-black via-zinc-600/10 to-black">
+      {/* Logo */}
+      <div className="fixed left-4 top-4 z-30">
+        <Link href="/">
+          <Image
+            src="/logo.svg"
+            alt="Logo"
+            width={40}
+            height={40}
+            className="transition-transform duration-300 hover:rotate-180 hover:scale-110"
+          />
+        </Link>
+      </div>
+
       <nav className="mb-20 animate-fade-in">
         <ul className="flex items-center justify-center gap-4">
           {navigation.map((item) => (
