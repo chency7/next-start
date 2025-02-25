@@ -3,7 +3,7 @@
   "editor.fontSize": 14,
   "editor.lineHeight": 1.5,
   "editor.fontLigatures": true,
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "Dark",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {

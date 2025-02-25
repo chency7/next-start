@@ -8,7 +8,7 @@ import { Github } from 'lucide-react';
 import { motion, useAnimation } from 'framer-motion';
 
 const navigation = [
-  { name: '随记', href: '/views/projects' },
+  { name: '随记', href: '/notes' },
   // { name: "博客", href: "/views/contact" },
   // { name: "关于", href: "/views/ablut" },
 ];
