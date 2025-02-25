@@ -19,9 +19,9 @@ async function NoteHeader({ slug }: { slug: string }) {
         {frontmatter.title}
       </h1>
       <div className="mt-4 flex items-center gap-3 text-zinc-600 dark:text-zinc-400">
-        <time className="flex items-center gap-1 text-sm">
+        <time className="flex items-center gap-1 text-sm" suppressHydrationWarning>
           <span className="inline-block h-1 w-1 rounded-full bg-zinc-400 dark:bg-zinc-500"></span>
-          {new Date(frontmatter.date).toLocaleDateString('zh-CN')}
+          {frontmatter.date ? new Date(frontmatter.date).toLocaleDateString('zh-CN') : ''}
         </time>
         <div className="flex flex-wrap gap-2">
           {frontmatter.tags.map((tag) => (
@@ -49,16 +49,18 @@ async function NoteBody({ slug }: { slug: string }) {
 }
 
 interface NotePageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-const NotePage = async ({ params }: NotePageProps) => {
+export default async function NotePage({ params }: NotePageProps) {
+  const { slug } = await params;
+  
   return (
     <>
       <Suspense fallback={<div className="h-8 w-full animate-pulse bg-gray-200" />}>
-        <NoteHeader slug={params.slug} />
+        <NoteHeader slug={slug} />
       </Suspense>
 
       <Suspense
@@ -70,10 +72,8 @@ const NotePage = async ({ params }: NotePageProps) => {
           </div>
         }
       >
-        <NoteBody slug={params.slug} />
+        <NoteBody slug={slug} />
       </Suspense>
     </>
   );
-};
-
-export default NotePage;
+}

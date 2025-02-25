@@ -1,13 +1,7 @@
 import './global.css';
 import { Metadata } from 'next';
-import { useEnv } from '@/hooks/useEnv';
-import { RouteMiddleware } from '@/middleware/router';
-import Loading from '@/components/loading';
-import MusicPlayer from '@/components/MusicPlayer';
-import React from 'react';
-import { AudioProvider } from '@/components/AudioProvider';
 import { inter, pacifico, lxgwWenKai, calSans } from '@/utils/fonts';
-import { ThemeProvider } from '@/components/theme-provider';
+import ClientLayout from '@/components/ClientLayout';
 
 export const metadata: Metadata = {
   title: {
@@ -31,34 +25,15 @@ export const metadata: Metadata = {
   },
 };
 
-interface RootLayoutProps {
-  children: React.ReactNode;
-}
-
-export default function RootLayout({ children }: RootLayoutProps) {
-  const { isDevelopment } = useEnv();
-  const debugScreens = isDevelopment ? 'debug-screens' : '';
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="zh"
       className={[lxgwWenKai.variable, pacifico.variable, calSans.variable].join(' ')}
       suppressHydrationWarning
     >
-      <head>
-        {/* 分析工具停用 */}
-        {/* <Analytics /> */}
-      </head>
-      <body className={`bg-black ${debugScreens}`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <MusicPlayer />
-          {/* 暂时隐藏关于按钮 */}
-          <AudioProvider>
-            <RouteMiddleware>
-              <React.Suspense fallback={<Loading />}>{children}</React.Suspense>
-            </RouteMiddleware>
-          </AudioProvider>
-        </ThemeProvider>
+      <body className="bg-black">
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

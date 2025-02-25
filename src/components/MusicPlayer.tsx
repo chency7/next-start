@@ -139,7 +139,7 @@ export default function MusicPlayer() {
 
   return (
     <>
-      <div className="fixed right-4 top-4 z-50 flex flex-col items-center gap-2">
+      <div className="absolute right-4 top-4 z-50 flex flex-col items-center gap-2">
         <button
           ref={buttonRef}
           onClick={toggle}
@@ -186,7 +186,7 @@ export default function MusicPlayer() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
-            className={`fixed z-50 flex items-center gap-4 overflow-hidden rounded-full bg-zinc-900/90 px-4 py-2 text-zinc-400 shadow-lg backdrop-blur-sm ${
+            className={`absolute z-50 flex items-center gap-4 overflow-hidden rounded-full bg-zinc-900/90 px-4 py-2 text-zinc-400 shadow-lg backdrop-blur-sm ${
               isMobile ? 'bottom-4 left-0 right-0 mx-auto w-[280px]' : 'bottom-8 right-8 w-60'
             }`}
           >

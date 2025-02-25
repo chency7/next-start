@@ -80,4 +80,6 @@ export async function getNoteData(slug: string): Promise<NoteContent> {
         },
         content
     }
-} 
+}
+
+export type Note = NoteData; 

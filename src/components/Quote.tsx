@@ -141,7 +141,7 @@ export default function Quote({ className = "", interval = 5000 }: QuoteProps) {
   }, [interval, useLocalQuotes]);
 
   return (
-    <div className={`fixed bottom-8 left-1/2 -translate-x-1/2 animate-fade-in ${className}`}>
+    <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in ${className}`}>
       <div className="relative max-w-[90vw]">
         {/* 背景 */}
         <div

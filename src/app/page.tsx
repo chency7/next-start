@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react';
 import Particles from '@/components/particles';
 import { Github } from 'lucide-react';
 import { motion, useAnimation } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 const navigation = [
   { name: '随记', href: '/notes' },
@@ -27,6 +28,8 @@ export default function ThemeDark() {
   const SCROLL_THRESHOLD = 300; // 滚动阈值：300px
 
   const [isHovered, setIsHovered] = useState(false);
+
+  const pathname = usePathname();
 
   // 波浪动画配置
   const container = {
@@ -113,9 +116,9 @@ export default function ThemeDark() {
   }, [fillPercentage, controls]);
 
   return (
-    <div className="fixed inset-0 flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-tl from-black via-zinc-600/10 to-black">
+    <div className={`relative inset-0 flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-tl from-black via-zinc-600/10 to-black`}>
       {/* Logo */}
-      <div className="fixed left-4 top-4 z-30">
+      <div className="absolute left-4 top-4 z-30">
         <Link href="/">
           <Image
             src="/logo.svg"
@@ -123,6 +126,7 @@ export default function ThemeDark() {
             width={40}
             height={40}
             className="transition-transform duration-300 hover:rotate-180 hover:scale-110"
+            priority
           />
         </Link>
       </div>

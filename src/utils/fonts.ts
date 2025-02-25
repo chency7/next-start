@@ -1,11 +1,10 @@
 import { Inter, Pacifico } from 'next/font/google';
-import LocalFont from 'next/font/local';
+import localFont from 'next/font/local';
 
 export const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'block',
-  preload: true,
   weight: ['400'],
   fallback: ['system-ui', 'sans-serif'],
 });
@@ -18,7 +17,7 @@ export const pacifico = Pacifico({
   fallback: ['cursive', 'system-ui'],
 });
 
-export const lxgwWenKai = LocalFont({
+export const lxgwWenKai = localFont({
   src: [
     {
       path: '../../public/fonts/LXGWWenKai-Regular.ttf',
@@ -28,11 +27,10 @@ export const lxgwWenKai = LocalFont({
   ],
   variable: '--font-wenkai',
   display: 'block',
-  preload: true,
   fallback: ['system-ui', 'Microsoft YaHei', 'sans-serif'],
 });
 
-export const calSans = LocalFont({
+export const calSans = localFont({
   src: [
     {
       path: '../../public/fonts/CalSans-SemiBold.ttf',
@@ -42,6 +40,5 @@ export const calSans = LocalFont({
   ],
   variable: '--font-calsans',
   display: 'block',
-  preload: true,
   fallback: ['system-ui', 'sans-serif'],
 });

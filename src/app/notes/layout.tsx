@@ -21,7 +21,7 @@ export default function NotesLayout({ children }: { children: React.ReactNode })
           </div>
           <div className="space-y-4">
             <h1 className="bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-900 bg-clip-text text-4xl font-bold tracking-tight text-transparent dark:from-zinc-100 dark:via-zinc-300 dark:to-zinc-100">
-              笔记系统
+              随记
             </h1>
             <p className="max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
               这里记录了我的学习笔记和技术分享，希望能帮助到你。
