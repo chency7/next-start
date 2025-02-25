@@ -155,7 +155,7 @@ export default function ThemeDark() {
           initial="hidden"
           animate="visible"
         >
-          {Array.from('Chency').map((letter, index) => (
+          {Array.from('Next...').map((letter, index) => (
             <motion.span
               key={index}
               variants={child}
@@ -188,7 +188,7 @@ export default function ThemeDark() {
             },
           }}
         >
-          {Array.from('Chency').map((letter, index) => (
+          {Array.from('Next...').map((letter, index) => (
             <motion.span
               key={index}
               className="inline-block"
@@ -213,10 +213,10 @@ export default function ThemeDark() {
           <Github className="mr-1 inline h-4 w-4" />
           <Link
             target="_blank"
-            href="https://github.com/chency7"
+            href="https://github.com/  7"
             className="duration-500 hover:text-zinc-300 hover:underline"
           >
-            chency.github
+              .github
           </Link>
         </h2>
       </div>

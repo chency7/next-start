@@ -5,8 +5,8 @@ import ClientLayout from '@/components/ClientLayout';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Chency.me',
-    template: '%s | chency.me',
+    default: '  .me',
+    template: '%s |   .me',
   },
   description: 'Software engineer and web developer',
   robots: {
